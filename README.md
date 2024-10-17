@@ -1,5 +1,6 @@
-# Rust Intel 4004 Emulator
-世界初(1971年)のCPU `Intel 4004`をRustでエミュレート🥳
+# Rust Intel 4004エミュレータ(開発中)
+
+Rustで実装した世界初(1971年)のCPU `Intel 4004`のエミュレータ🥳
 ※絶賛開発中です！
 
 # Intel 4004
@@ -40,11 +41,9 @@
   -  データRAM: 最大 5120 bit  (640 Byte)
 
 ## 命令セット
-### Rustでの実装
-
-[実装状況]
-- ✅ ... 実装済み (4/46)
-- ❌ ... TBD (42/46)
+[Rustでの実装状況]
+- ✅ ... 実装済み (5/46)
+- ❌ ... TBD
 
 | No. | Category                                | Instruction | Description (英語 / 日本語)                                   |
 |-----|-----------------------------------------|-------------|----------------------------------------------------------|
@@ -52,8 +51,8 @@
 | 2   | INDEX REGISTER INSTRUCTIONS             | FIN         | Finish operation / 操作を終了する                            |
 | 3   | INDEX REGISTER TO ACCUMULATOR INSTRUCTIONS | ADD         | Add index register to accumulator / インデックスレジスタをアキュムレータに加算 |
 | 4   | INDEX REGISTER TO ACCUMULATOR INSTRUCTIONS | SUB         | Subtract index register from accumulator / アキュムレータからインデックスレジスタを減算 |
-| 5   | INDEX REGISTER TO ACCUMULATOR INSTRUCTIONS | LD          | Load index register to accumulator / インデックスレジスタをアキュムレータにロード |
-| 6   | INDEX REGISTER TO ACCUMULATOR INSTRUCTIONS | XCH         | Exchange index register with accumulator / インデックスレジスタとアキュムレータを交換 |
+| 5   | INDEX REGISTER TO ACCUMULATOR INSTRUCTIONS | ✅LD          | Load index register to accumulator / インデックスレジスタをアキュムレータにロード |
+| 6   | INDEX REGISTER TO ACCUMULATOR INSTRUCTIONS | ✅XCH         | Exchange index register with accumulator / インデックスレジスタとアキュムレータを交換 |
 | 7   | ACCUMULATOR INSTRUCTIONS                | CLB         | Clear accumulator / アキュムレータをクリア                     |
 | 8   | ACCUMULATOR INSTRUCTIONS                | CLC         | Clear carry / キャリーをクリア                                 |
 | 9   | ACCUMULATOR INSTRUCTIONS                | IAC         | Increment accumulator / アキュムレータをインクリメント          |
@@ -67,15 +66,15 @@
 | 17  | ACCUMULATOR INSTRUCTIONS                | STC         | Set carry / キャリーをセット                                   |
 | 18  | ACCUMULATOR INSTRUCTIONS                | DAA         | Decimal adjust accumulator / アキュムレータを十進法で調整       |
 | 19  | ACCUMULATOR INSTRUCTIONS                | KBP         | Keyboard process / キーボードプロセス                        |
-| 20  | IMMEDIATE INSTRUCTIONS                  | FIM         | Fetch immediate / 即時取得                                    |
-| 21  | IMMEDIATE INSTRUCTIONS                  | LDM         | Load accumulator immediate / アキュムレータを即時にロード        |
+| 20  | IMMEDIATE INSTRUCTIONS                  | ✅FIM         | Fetch immediate / 即時取得                                    |
+| 21  | IMMEDIATE INSTRUCTIONS                  | ✅LDM         | Load accumulator immediate / アキュムレータを即時にロード        |
 | 22  | TRANSFER OF CONTROL INSTRUCTIONS        | JUN         | Jump unconditionally / 条件なしジャンプ                         |
 | 23  | TRANSFER OF CONTROL INSTRUCTIONS        | JIN         | Jump indirect / 間接ジャンプ                                   |
 | 24  | TRANSFER OF CONTROL INSTRUCTIONS        | JCN         | Jump on condition / 条件付きジャンプ                           |
 | 25  | TRANSFER OF CONTROL INSTRUCTIONS        | ISZ         | Increment and skip if zero / ゼロの場合はインクリメントしてスキップ |
 | 26  | SUBROUTINE LINKAGE INSTRUCTIONS         | JMS         | Jump to subroutine / サブルーチンへジャンプ                    |
 | 27  | SUBROUTINE LINKAGE INSTRUCTIONS         | BBL         | Branch back and load / ブランチバックしてロード                  |
-| 28  | NOP                                     | NOP         | No operation / ノーオペレーション                               |
+| 28  | NOP                                     | ✅NOP         | No operation / ノーオペレーション                               |
 | 29  | MEMORY SELECTION INSTRUCTIONS            | DCL         | Designate command line / コマンドラインを指定                   |
 | 30  | MEMORY SELECTION INSTRUCTIONS            | SRC         | Send register control / レジスタコントロールを送信               |
 | 31  | I/O AND RAM INSTRUCTIONS                | WRM         | Write data RAM character / データRAM文字を書き込む              |
