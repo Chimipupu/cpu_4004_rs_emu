@@ -3,6 +3,10 @@
 Rustで実装した世界初(1971年)のCPU `Intel 4004`のエミュレータ🥳
 ※絶賛開発中です！
 
+## 調査記録
+Zenn「Intel 4004 調査記録📚」
+https://zenn.dev/chimipupu/articles/71a6a540d1fec7
+
 # Intel 4004
 
 ![](https://storage.googleapis.com/zenn-user-upload/0445e8c44e66-20241017.png)
@@ -89,6 +93,15 @@ Rustで実装した世界初(1971年)のCPU `Intel 4004`のエミュレータ�
 | 46  | I/O AND RAM INSTRUCTIONS                | SBM         | Subtract data RAM from memory with borrow / メモリからデータRAMを減算 |
 
 # 参考文献
+📚[Intel 4004 データシート]
+- https://deramp.com/downloads/mfe_archive/050-Component%20Specifications/Intel/Microprocessors%20and%20Support/4004%20Family/4004Data.pdf
+
+📚[MCS4 Assembly Language Programming Manual]
+- https://codeabbey.github.io/heavy-data-1/msc-4-asm-manual-1973.pdf
+
+📚[Detailed Instruction Repertoire of the MCS-4]
+- http://e4004.szyc.org/iset.html
+
 🎦動画[NHKスペシャル　電子立国　日本の自叙伝　第5回　8ミリ角のコンピュータ]
 - https://www.nhk-ondemand.jp/goods/G2011034631SA000/index.html
 
@@ -97,15 +110,6 @@ Rustで実装した世界初(1971年)のCPU `Intel 4004`のエミュレータ�
 
 📚嶋正利さん[マイクロプロセッサ 4004の開発]
 - https://www.shmj.or.jp/dev_story/pdf/develop43.pdf
-
-📚[Intel 4004 データシート]
-- https://deramp.com/downloads/mfe_archive/050-Component%20Specifications/Intel/Microprocessors%20and%20Support/4004%20Family/4004Data.pdf
-
-📚MCS-4アセンブラのマニュアル[MCS4 Assembly Language Programming Manual]
-- https://codeabbey.github.io/heavy-data-1/msc-4-asm-manual-1973.pdf
-
-📚[Detailed Instruction Repertoire of the MCS-4]
-- http://e4004.szyc.org/iset.html
 
 📚[Intel公式4004関連]
 - https://www.intel.co.jp/content/www/jp/ja/newsroom/news/intel-marks-50th-anniversary-4004.html
