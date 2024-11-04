@@ -6,7 +6,7 @@ fn main() {
     let mut cpu = i4004::new();
     println!("Intel 4004 Emulator by Chimi (https://github.com/Chimipupu/cpu_4004_rs_emu)");
 
-    // 1 + 1 = 2
+    // i4004のアセンブラ
     let program = [
         0x00,       // NOP
         0xFF,       // HALT
